@@ -1,0 +1,161 @@
+em formulário utilizamos as Tags
+
+<label>Nome do botão</label>
+<input type="text"> -----> cria o campo para digitação, e define o tipo, neste caso text
+dentro do input podemos definir placeholder que auxilia na hora de se comunicar com o usuário
+deixando uma dica do que deve ser digitado dentro do campo
+<p>Ex</p>
+<label>Nome</label>
+<input type="text" placeholder="Ex: Douglas">
+
+<p>para campos do tipo data podemos usar a seguinte tag</p>
+<p>Ex</p>
+<label>Data</label>
+<input type="date">
+<p>Com o input tipo date o formulário deixará somente selecionar uma data válida</p>
+
+<p>quando se trata de numeros, podemos definir o campo para receber somente numero de um <b>Minimo</b> a um valor <b>Maximo</b></p>
+<p>Ex:</p>
+<label>Numero</label>
+<input type="number" min="1" max="100">
+<p>no caso acima, o numero Minimo para ser utilizado é 1 e o maximo é 100</p>
+<p>Caso o usuário tente digitar algo difirente disso, irá apresentar erro posteriormente</p>
+
+<p>para fazermos uma seleção por exemplo para o user selecionar entre Masculino e Feminino 
+    utilizado o <b>radio</b>
+
+</p>
+<p>Ex:</p>
+<label>Sexo</label>
+<input type="radio" name="Masculino">
+<input type="radio" name="Feminino">
+
+<p>porem quando utiilzamos o mesmo precisamos utilizar alguns atributos para dar nome as seleções para isso utilizamos a seguinte estrutura</p>
+
+<p>Ex:</p>
+<label>Sexo</label>
+<input type="radio" name="Masculino">
+<label>Masculino</label>
+<input type="radio" name="Feminino">
+<label>Feminino</label>
+
+<p>quando utilizamos desta forma nenhum campo estara marcado como padrão, se quisermos que exista uma seleção padrão, previsamos adicionar o atributo checked na opção que queremos que seja padrão</p>
+<p>Ex:</p>
+<label>sexo</label>
+<input type="radio" name="Masculino" checked>
+<label>Masculino</label>
+<input type="radio" name="Feminino">
+<label>Feminino</label>
+
+<p>Utilizando o checked marcamos o input com ele como padrão para seleçãosudo</p>
+
+<p>para criarmos um botão para seleção de estados, utiilzamos o atributo select e dentro dele o atributo option para podermos setar os valores</p>
+<p>Ex:</p>
+<label>Estado</label>
+<select>
+    <option value="sc">Santa Catarina</option>
+    <option value="rj">Rio de Janeiro</option>
+</select>
+<p>por padão, dentro do value que é o valor do campo, utilizamos somente a UF do estado, pois assim é menor a informação apra troca posteriormente com o servidor</p>
+<p>o campo value atribui o valor do campo, nos casos acimas a UF de cada estado</p>
+
+<p>Para adicionarmos um campo para digitação de textos utilizamos a tag <b>textarea</b></p>
+<p>Ex:</p>
+<label>Digite seu texto aqui</label>
+<textarea></textarea>
+
+<p>para definirmos um limite de caracteres utiilzamos o atributo <b>maxlength="Tamanho Maximo"</b></p>
+<p>neste caso ficaria desta forma a tag</p>
+
+<p>Ex:</p>
+
+<label>Digite seu texto aqui</label>
+<textarea maxlength="256" placeholder="Digite seu texto"></textarea>
+
+<p>Podemos utilziaro o atributo placeholder para darmos uma dica ao user do que deve ser digitado neste campo</p>
+
+<p>para criarmos um checkbox utilizamos o name checkbox no input, desta forma podemos adicionar um ao texto</p>
+<p>Ex:</p>
+
+<label> Deseja receber ofertas</label>
+<input type="checkbox">
+
+<P>se utilizarmos o input antes do label neste caso, temos o checkbox antes do texto, podemos utilizar o atributo <b>checked</b> para deixarmos o checkbox marcado por padrão, neste caso ficaria assim</P>
+<p>Ex:</p>
+
+<input type="checkbox" checked>
+<label> Deseja receber ofertas por e-mail</label>
+
+
+<p>para fazermos o envio de algum tipo de dados Ex: arquivos utilizamos a opção  file no input, ficando da seguinte maneira</p>
+<p>Ex:</p>
+
+<label>Arquvip</label>
+<input type="file">
+
+<p>porem neste caso, todos os arquivos poderão ser carregados, para deixarmos marcamos somente um tipo de arquivo, utilizamos o atributo <b>accept</b> nele definimos o tipo de arquivo <b>ex: image/*</b> neste caso poderemos enviar qualquer formato de imagem, porem, somente imagem, o código fica assim neste caso </p>
+<p>Ex:</p>
+
+<label>Envie o arquivo</label>
+<input type="file" accept="image/*">
+
+<p>para separarmos os campos e deixarmos o formulário mais organizado para o usuário, utilizamos a tag <b>fieldset</b> essa tag marca uma caixa ao redor dos campos que estão dentrod dela</p>
+<p>Ex:</p>
+
+<form>
+    <div>
+        <fieldset>
+            <div>
+                <label> Nome do usuário</label>
+                <input type="email">
+            </div>
+            <div>
+                <label> Senha da Conta</label>
+                <input type="password">
+            </div>    
+        </fieldset>
+    </div>
+</form>
+
+<p>neste caso, podemos adicionar uma leganda ao <b>fieldset</b> para isso utilizamos a tag <b>legend</b> logo abaxi odo <b>fieldset</b></p>
+<p>Ex:</p>
+
+<form>
+    <div>
+        <fieldset>
+            <legend>Dados Do Usuário</legend>
+                <div>
+                    <label>Nome do Usuário</label>
+                    <input type="email">
+                </div>
+                <div>
+                    <label>Senha Da Conta</label>
+                    <input type="password">
+                </div>
+        </fieldset>
+    </div>
+</form>
+
+<p> com a utilização da tag <b>legend</b> deixamos html mais apresentavel ao usuário</p>
+
+
+<p> para enviarmos o formulário a algum endereço, utilizamos a tag definida no topo do fumulário <b>form method="GET" action=""</b></p>
+<p> o campo <b>action</b> é onde deve ser definido o endereço do serviço a ser enviado</p>
+
+<p>para enviarmos o fumulário precisamos criar um botão de submit para podermos encaminhar o mesmo, para isso utilizamos a seguente estrutura</p>
+
+<p>Ex:</p>
+
+<input type="submit" value="Enviar" name="submit">
+
+<p>beja que o value é o nome que aparecerá no botão e o name é a informação que o servidor recebera</p>
+
+<h1><p>MUITO IMPORTANTE!!!!</p></h1>
+<h1><p>SEMPRE UTILIZAR O ATRIBUTO NAME NAS TAGS POIS É ELE QUEM VAI IDENTIFICAR QUAL O NOME DO CAMPO PARA O SERVIDOR DE DESTINO, SEM ELE A INFORMAÇÃO SE PERDE</p></h1>
+
+<p>para validarmos informações podemos utiilzar o atributo <b>required</b> esse atributo faz com que o campo seja obrigatório</p>
+<p>no caso do campo <b>radio</b> devmos utilizar o checked pois caso contrário estaremos invalidaos o campo</p>
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="GET" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
+       <fieldset>
+           <legend>Conta</legend>
+            <div>
+            <label>Email</label>
+            <input type="email" name="email" required minlength="5" maxlength="256"/>
+   
+        </div>
+        <div>
+            <label>Senha</label>
+            <input type="password" name="senha" required/>
+        </div>
+        
+       </fieldset>
+        
+       <fieldset>
+           <legend>Dados do Usuário</legend>
+        <div>
+            <label>Nome</label>
+            <input type="text" placeholder="Ex: Douglas Daló" name="nomeuser">
+        </div>
+        <div>
+            <label>Telefone</label>
+            <input type="text" placeholder="Ex: (47)99999-9999" name="teluser">
+        </div>
+        <div>
+            <label>Sexo</label>
+            <input type="radio" value="Masculino" name="sexo" checked>
+            <label>Masculino</label>
+            <input type="radio" value="Feminino" name="sexo">
+            <label>Feminino</label>
+        </div>
+        <div>
+            <label>Data</label>
+            <input type="date" name="data">
+        </div>
+        <div>
+            <label>Foto de perfil</label>
+            <input type="file" accept="image/*" name="foto">
+        </div>
+        
+       </fieldset>
+        
+        <fieldset>
+            <legend>Dados do endereço</legend>
+            <div>
+                <label>Rua</label>
+                <input type="text" placeholder="Ex: Rua das Couves" name="rua">
+            </div>
+            <div>
+                <label>Numero</label>
+                <input type="number" min="1" max="9999" name="number">
+            </div>
+            <div>
+                <label>Complemento</label>
+                <input type="text" placeholder="Ex: Casa Dois Pisos" name="complemento">
+            </div>
+            <div>
+                <label>Cidade</label>
+                <input type="text" placeholder="Ex: Itajaí" name="cidade">
+            </div>
+            <label>Estado</label>
+            <select name="uf">
+                <option value="sc">Santa Catarina</option>
+                <option value="rj">Rio de janeiro</option>
+                <option value="rs">Rio Grande Do Sul</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <Legend>Anuncio</Legend>
+            <div>
+                <label>Como conheceu o DEV</label>
+                <textarea maxlength="256" placeholder="Digite aqui como conheceu o DEV" name="text"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" required name="checkbox">
+                <label>Deseja receber ofertas por e-mail</label>
+                
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Enviar" name="submit">
+        
+        
+    </form>    
+    
+</body>
+</html>

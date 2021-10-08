@@ -1,0 +1,26 @@
+b {
+    color:rgb(0, 255, 0);
+
+}
+h1 {
+    color: #ff0000;
+    font-style: italic;
+    font-size: 22px;
+}
+div {
+    background: #fafafa;
+}
+a{
+    display: block;
+    color: yellow;
+}
+h2{
+    color: blue;
+    font-weight: bold;
+    font-stretch: 10;
+    width: 100%;
+}
+h3{
+    font-size: A;
+}
+

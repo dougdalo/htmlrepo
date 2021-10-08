@@ -1,0 +1,400 @@
+<h1> Explorando esse documento </h1>
+DOCTYPE
+
+DOCTYPE é uma instrução sobre qual a versão do HTML que vai ser renderizada, nesse caso <!DOCTYPE html> representa o HTML versão 5. Essa declaração deve ser a primeira linha do arquivo HTML.
+html
+
+É dentro dessa tag que todas as demais serão escritas. A única coisa que pode ficar fora dessa tag é a declaração DOCTYPE.
+
+Um documento HTML deve ser escrito e estruturado em duas grandes seções: head e body.
+head
+
+É aqui que adicionamos tags com informações importantes sobre o documento, tais como o seu título, descrição, codificação de caracteres, entre outras.
+
+Nesse exemplo, utilizamos as tags meta e title.
+meta
+
+Meta informa para o navegador qual codificação de caracteres utilizamos quando o documento foi escrito, algo importante para que um "�" não apareça no lugar de outros caracteres, como letras acentuadas, por exemplo.
+
+A codificação de caracteres você encontra no rodapé do seu editor de códigos, mas ela também depende do servidor onde a página web será hospedada, que geralmente vai usar UTF-8.
+
+title
+
+Também adicionamos em head o título da página web, utilizando title.
+
+body
+
+É o corpo da página web, onde todo o conteúdo que será apresentado para o usuário estará.
+
+Essa, com certeza, é a maior parte do documento.
+
+Aqui usamos três elementos para estruturar o conteúdo da página web: h1, p, blockquote.
+h1
+
+A maioria das páginas web terá um H1, que representa um título, geralmente escrito em letra maior. Existem seis formas de criar um título no HTML, começando com H1 até H6, o tamanho da letra vai ficando cada vez menor.
+p
+
+Um p é um parágrafo de um texto.
+blockquote
+
+É uma citação no texto.
+
+Esse é apenas um exemplo de documento.
+
+
+Elementos que se escrevem com uma única tag
+
+Um exemplo é img.
+
+Escrever <img></img> é errado, o correto é escrever <img>.
+
+Geralmente, esses elementos se baseiam mais em atributos para dar informações sobre o seu conteúdo. Como vimos, um atributo possui nome e valor.
+
+Por exemplo, img possui o atributo src, que aponta para o local de onde o seu conteúdo será obtido.
+
+<img src="https://www.devmedia.com.br/arquivos/cursos/logo.png" alt="Objeto real">
+
+Aqui, img obtém seu conteúdo do endereço “https://www.devmedia.com.br/arquivos/cursos/logo.png”, onde o logo da DevMedia está.
+Outros exemplos
+
+Um outro elemento que não possui tag de fechamento e que usaremos muito se chama input.
+
+Ora um input é aquela caixinha na qual digitamos texto, ora ele é uma elaborada forma de selecionar uma cor.
+Objeto real
+
+Novamente, vemos o exemplo de um elemento, input, dependendo de um atributo, type, para dar ao navegador informações sobre ele.
+Elementos que não precisam de tag de fechamento não permitem o nesting e nunca possuirão outras tags aninhadas dentro delas.
+
+Existem poucos elementos que possuem apenas tag de abertura, a maioria possui tag de abertura e fechamento.
+
+
+<h1></h1>
+a		criam titulos
+<h6></h6>
+
+<p> - cria paragrafo
+
+<a> - Cria um link
+
+	utiliar target="_self" abre a URl a mesma aba do navegador. Valor padrão e não precisa ser definido
+	utilizar target="_blank" abre a URL em uma nova aba do navegador
+o botão ser direcionado para ligar para o numero já o então	
+	podemos usar o "tel:+5547999330248" para quando clicar n
+	podemos usar o "mailto:douglas.dalo@somadatta.com.br" para abrir o e-mail e podermos encaminahr para o e-mail digitado
+
+<img> - Exibe uma imagem
+	alt - Texto que descreve a imagem
+	height="" - define a largura
+	width="" - define a altura de imagem
+	title="" - Exibe um tooltip ao passar o mouse sobre a imagem
+	
+	Pode ser criado uma subpasta e referenciado a mesma para puxar as imagens nesse caso utilizaria a seguinte sintaxe PASTA/NOME_ARQUIVO.EXTENÇÃO
+	
+<div> - Agrupa elementos
+
+<span> - serve para dar destaque a alguma frase/palavra para organizar melhor o cod
+
+
+Iframe - serve para linkar paginas externas para a nossa, exemplo clima
+    <iframe
+      src="https://www.accuweather.com/pt/br/balne%C3%A1rio-cambori%C3%BA/2308734/hourly-weather-forecast/2308734"
+      width="600" height="450"
+    > </iframe>
+EX; google maps
+<div>
+    <h3>Contato</h3>
+
+    <p>Endereço: Av. Ayrton Senna, 3000 - Barra da Tijuca, Rio de Janeiro - RJ</p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.1178584692666!2d-43.36403258535193!3d-22.982693146361264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2ec9620a2d%3A0x5c8412e8969fa343!2sDevMedia!5e0!3m2!1spt-BR!2sbr!4v1614278713361!5m2!1spt-BR!2sbr"
+      width="600" height="450"
+    ></iframe>
+
+  </div>
+  
+  ----------------------------------
+  <h1>TAGS de Cabeçalho</h1>
+  
+title - Define o titulo da pag
+meta (description, charset, viewport, robots)
+<meta name="description" content="Oque será buscado pelos motores de pesquisa"> = define a descrição de uma pag - utilizada por motores de pesquisa e buscadores e outros serviços web
+<meta charset="UTF-8"> = Informa ao browser o conjunto de caracteres que nossa página utiliza, respnsável por exibir caracteres especiais como 'é''à' corretamente na tela "UTF-8" é o padrão por ser o mais completo
+<meta name="robots" content="noindex" /> = é utilizada quando queremos que uma página não apareça nos resultados de busca, utiliada para impedir que os buscadores exibam páginas internas como relatórios e sistemas administrativos
+<meta name="robots" content="nofollow"> = todo o buscados acessa o conteudo de páginas em busca de informações. como título, descrição e links, dizemos ao buscador para não nos associar aos links da página, util quando a pag possui muitos links externos ou quando os links apontam para páginas com dados pessoais, extratos, números de telefone, etc
+<meta name="robots" content="noindex, nofollow"/> impede a página de aparecer em resultado de busca e dizemos ao buscador para não nos associar aos links da página.
+<meta name=”viewport” content="width=device-width, initial-scale=1"> = a meta tag Viewport e utilizada para que o conteúdo da página seja exibido corretamente na tela de um dispositivo, independente do tamanho o content="width=device-width ajusta a largura do conteúdo já o initial-scale=1 define o zoom inicial da página 1.0 = padrão do browser(sem zoom)
+
+link
+<link rel="stylesheet" href="style.css"> = server para linkar um arquivo HTML a um arquivo CSS para realizarmos a estilização do HTML onde o hfer="" aponta para o arquivo CSS com os estilos da página
+
+style
+<style>  
+            div{
+                background: #b8b8b8;
+            }
+        </style> Permite escrever o conteudo do CSS diremante no arquivo HTML e tem o mesmo resultado final que a tag <link>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pousada Secreta</title>  define o titulo da pag
+        <meta name="robots" content="noindex" />
+         <meta name="viewport" content="width=device-width, initial-scale=1">  dimensiona corretamente na tela do dispositivo
+        <link rel="stylesheet" type="text/css" href="style.css">  add arquivo css Externo
+        <script type="text/javascript" src="script.js"></script> Add arquivo JS externo
+	<meta name="description" content="Este é o curso de HTML onde você vai aprender tudo d básico ao avançado">    
+    </head>
+
+        <body>
+            <div>
+                
+
+            </div>
+
+
+
+        </body>
+</html>
+  
+  
+---------------------------------------------------------------------  
+
+<h1>LISTAS</h1>
+
+<p>As listas ordenadas são usadas para indicar uma sucessão de itens ou sequência de passos</p>
+Ex:
+
+<ol>
+    <li>Misture os ingredientes</li>
+    <li>Unte a forma com manteiga e farinha</li>
+    <li>espalhe o recheio na forma</li>
+    <li>leve ao forno preaquecido a 180° C</li>
+
+
+</ol>
+
+<h1>Listas Não Ordenadas</h1>
+
+<p>As listas não ordenadas são usadas para listar itens que não se sucedem, onde a ordem não possui relevância</p>
+
+<ul>
+    <li>Tela 6.7 polegadas</li>
+    <li>Câmera de 32MP</li>
+    <li>128GB de armazenamento</li>
+
+</ul>
+
+<h1>Listas de definição</h1>
+
+<p>As listas de definição são usadas para citar um termo seguido de sua definição, estilo perguntas e respostas</p>
+
+<dl>
+    <dt>Amor</dt>    
+
+<dd>
+    Forte afeitção por outra pessoa
+</dd>
+  
+      <dt>Ética</dt>
+  
+  <dd>Conjunto de regras e preceitos de ordem valorativa e moral</dd>
+</dl>
+
+<h1>por que listas são uteis</h1>
+
+<p>O objetivo principal do HTML é organizar um documento. Ou seja, dar semântica ao texto</p>
+<p>Utilizar listas segue essa ideia: estamos organizando o documento, separando as listagens em seus contextos corretos</p>
+<p>Um benefçio prático é, por exemplo, quando o google acessa a nossa páina: ele vai saber diferenciar as lsitas dos demais conteúdos</p>
+<p>Em resumo: usar listas é putil pois é mais uma forma de organizar o cumento através da linguagem HTML</p>
+
+<h1>Estilizando listas</h1>
+
+<p>É possivel utilizar uma lsita HTML através do CSS para dar um aspecto visual mais bonito</p>
+
+<h1>Utilização lista ordenada</h1>
+<img src="https://www.devmedia.com.br/arquivos/cursos/Listas_HTML/aula2/s2.jpg" alt="Utilização lsita ordenada" height="300" width="500">
+
+<h2>Alterando marcação</h2>
+<p>Para alterarmos o tipo de marcação devemos usar o atributo type</p>
+EX:
+
+<ol type="1"> - Ordenação numérica (padrão)</ol>
+<ol type="a"> - Ordenação alfabética minúscula</ol>
+<ol type="A"> - Ordenação alfabética maiúscula</ol>
+<ol type="i"> - numerais romanos minúsculos</ol>
+<ol type="I"> - Numerais romanos maiúsculos</ol>
+
+<h2>Ponto de partida (start)</h2>
+
+<p>podemos definir um ponto de partida para a classificação dos intens, desta forma a numeraçao começará a partir de um número especificado no atributo start</p>
+EX:
+<ol start="3">
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+</ol>
+
+<h2>Invertendo a ordem (reversed)</h2>
+
+<p>através do atribut reversed informamos que o comportamento da nossa lista será de manera reversa</p>
+
+EX:
+
+<ol reversed>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+
+</ol>
+
+<h1>Listas não Ordenadas</h1>
+
+<img src="https://www.devmedia.com.br/arquivos/cursos/Listas_HTML/aula3/s2.jpg" alt="Tags de utilização" height="300" width="500">
+EX:
+
+<ul>
+    <li>Laravel</li>
+    <li>Controle de versão Git</li>
+    <li>Orientação a objetos</li>
+    <li>Arquitetura MVC</li>
+</ul>
+
+<h2>tipos de marcação não ordenada</h2>
+
+<ul type="disc"> - Marcação atraves de circulos bolinha cheia</ul>
+<ul type="square"> - marcaão através de quadrados</ul>
+<ul type="circle"> - Marcação através de circunferencia (bolinha vazia)</ul>
+<ul type="none"> - remove a marcação da lista</ul>
+
+<ul>
+    <li>
+        <h3>Eletrodomésticos</h3>
+        <ul type="circle">
+            <li>Torradeiras</li>
+            <li>Fornos e Fogões</li>
+            <li>Geladeiras</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Hardware</h3>
+        <ul type="circle">
+            <li>Placas de vídeo</li>
+            <li>Placas de Som</li>
+            <li>Processadores</li>
+        </ul>
+    </li>
+</ul>
+
+<h1>Lista de definição</h1>
+
+<p>Objetivo de lista de definição é exibir termos e suas respectivas definições</p>
+Sintaxe
+A estrutura de uma lista de definição é composta pelas seguintes tags:
+
+<dl> </dl> - abertura e fechamento de uma lista;
+<dt> </dt> - abertura e fechamento de um termo;
+<dd> </dd> - abertura e fechamento de uma descrição.
+
+
+<dl>
+    <dt>Front-End</dt>
+    <dd>Toda parte visual de um site, onde o usuário interage diretamente.</dd>
+
+    <dt>Back-End</dt>
+    <dd>Estrutura por trás das aplicações, que suporta todas as ações do usuário.</dd>
+</dl>
+
+<h2>Lista de definição Tags</h2>
+<img src="https://www.devmedia.com.br/arquivos/cursos/Listas_HTML/aula4/s02.jpg" alt="Lista de definição" height="300" width="500">
+
+<h1>Exemplo prático</h1>
+<dl>
+    <dt> <h2>Empatia</h2></dt>
+    <dd> <p>Identificação de um sujeito com outro.</p> </dd>
+    <dd> <p>Se colocar no lugar de outra pessoa a fim de entendê-la.</p> </dd>
+    <dd> <p>Etimologia (origem da palavra empatia). Do grego empátheia; pelo inglês empathy.</p> </dd>
+    <dd> <a href="https://www.dicio.com.br/empatia/" target="_blank">ver mais </a> </dd>
+  
+    <dt> <h2>Ética</h2></dt>
+    <dd> <p>Conjunto de regras e preceitos de ordem valorativa e moral de um indivíduo.</p> </dd>
+    <dd> <p>O que é moralmente bom ou mau, certo ou errado.</p> </dd>
+    <dd> <p>Etimologia (origem da palavra ética). Do latim ethica; pelo grego éthikós.</p> </dd>
+    <dd> <a href="https://www.dicio.com.br/etica/" target="_blank">ver mais </a> </dd>
+  </dl>
+
+
+
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------
+  <h1>Tabelas</h1>
+
+  <table>
+    <tr>
+        <td>Jogo</td>
+        <td>Ano</td>
+    </tr>
+    <tr>
+        <td>Quantum Break</td>
+        <td>2016</td>
+    </tr>
+    <tr>
+        <td>Gears 5</td>
+        <td>2019</td>
+    </tr>
+</table>
+
+<h2><p>Para utiliar as tabelas precisamos de pelo menos 4 tags</p></h2>
+
+<ol type="1">
+    <li>TABLE</li>
+    <li>TR</li>
+    <li>TD</li>
+    <li>TH</li>
+
+</ol>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Time</th>
+        <th>J</th>
+        <th>SG</th>
+        <th>PTS</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>São Paulo</td>
+        <td>30</td>
+        <td>22</td>
+        <td>57</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Internacional</td>
+        <td>30</td>
+        <td>20</td>
+        <td>56</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Atlético Mineiro</td>
+        <td>29</td>
+        <td>14</td>
+        <td>53</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Flamengo</td>
+        <td>29</td>
+        <td>11</td>
+        <td>52</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Palmeiras</td>
+        <td>29</td>
+        <td>17</td>
+        <td>51</td>
+    </tr>
+</table>

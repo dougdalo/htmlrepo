@@ -1,0 +1,13 @@
+h1{
+    font-family: Arial;
+    color: #333;
+}
+
+p{
+    font-size: 14px;
+    font-weight: bold, italic;
+}
+
+blockquote{
+    margin: 0;
+}

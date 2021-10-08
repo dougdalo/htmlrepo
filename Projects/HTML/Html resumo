@@ -1,0 +1,164 @@
+Explorando esse documento
+DOCTYPE
+
+DOCTYPE é uma instrução sobre qual a versão do HTML que vai ser renderizada, nesse caso <!DOCTYPE html> representa o HTML versão 5. Essa declaração deve ser a primeira linha do arquivo HTML.
+html
+
+É dentro dessa tag que todas as demais serão escritas. A única coisa que pode ficar fora dessa tag é a declaração DOCTYPE.
+
+Um documento HTML deve ser escrito e estruturado em duas grandes seções: head e body.
+head
+
+É aqui que adicionamos tags com informações importantes sobre o documento, tais como o seu título, descrição, codificação de caracteres, entre outras.
+
+Nesse exemplo, utilizamos as tags meta e title.
+meta
+
+Meta informa para o navegador qual codificação de caracteres utilizamos quando o documento foi escrito, algo importante para que um "�" não apareça no lugar de outros caracteres, como letras acentuadas, por exemplo.
+
+A codificação de caracteres você encontra no rodapé do seu editor de códigos, mas ela também depende do servidor onde a página web será hospedada, que geralmente vai usar UTF-8.
+
+title
+
+Também adicionamos em head o título da página web, utilizando title.
+
+body
+
+É o corpo da página web, onde todo o conteúdo que será apresentado para o usuário estará.
+
+Essa, com certeza, é a maior parte do documento.
+
+Aqui usamos três elementos para estruturar o conteúdo da página web: h1, p, blockquote.
+h1
+
+A maioria das páginas web terá um H1, que representa um título, geralmente escrito em letra maior. Existem seis formas de criar um título no HTML, começando com H1 até H6, o tamanho da letra vai ficando cada vez menor.
+p
+
+Um p é um parágrafo de um texto.
+blockquote
+
+É uma citação no texto.
+
+Esse é apenas um exemplo de documento.
+
+
+Elementos que se escrevem com uma única tag
+
+Um exemplo é img.
+
+Escrever <img></img> é errado, o correto é escrever <img>.
+
+Geralmente, esses elementos se baseiam mais em atributos para dar informações sobre o seu conteúdo. Como vimos, um atributo possui nome e valor.
+
+Por exemplo, img possui o atributo src, que aponta para o local de onde o seu conteúdo será obtido.
+
+<img src="https://www.devmedia.com.br/arquivos/cursos/logo.png" alt="Objeto real">
+
+Aqui, img obtém seu conteúdo do endereço “https://www.devmedia.com.br/arquivos/cursos/logo.png”, onde o logo da DevMedia está.
+Outros exemplos
+
+Um outro elemento que não possui tag de fechamento e que usaremos muito se chama input.
+
+Ora um input é aquela caixinha na qual digitamos texto, ora ele é uma elaborada forma de selecionar uma cor.
+Objeto real
+
+Novamente, vemos o exemplo de um elemento, input, dependendo de um atributo, type, para dar ao navegador informações sobre ele.
+Elementos que não precisam de tag de fechamento não permitem o nesting e nunca possuirão outras tags aninhadas dentro delas.
+
+Existem poucos elementos que possuem apenas tag de abertura, a maioria possui tag de abertura e fechamento.
+
+
+<h1></h1>
+a		criam titulos
+<h6></h6>
+
+<p> - cria paragrafo
+
+<a> - Cria um link
+
+	utiliar target="_self" abre a URl a mesma aba do navegador. Valor padrão e não precisa ser definido
+	utilizar target="_blank" abre a URL em uma nova aba do navegador
+	
+	podemos usar o "tel:+5547999330248" para quando clicar no botão ser direcionado para ligar para o numero já o então
+	podemos usar o "mailto:douglas.dalo@somadatta.com.br" para abrir o e-mail e podermos encaminahr para o e-mail digitado
+
+<img> - Exibe uma imagem
+	alt - Texto que descreve a imagem
+	height="" - define a largura
+	width="" - define a altura de imagem
+	title="" - Exibe um tooltip ao passar o mouse sobre a imagem
+	
+	Pode ser criado uma subpasta e referenciado a mesma para puxar as imagens nesse caso utilizaria a seguinte sintaxe PASTA/NOME_ARQUIVO.EXTENÇÃO
+	
+<div> - Agrupa elementos
+
+<span> - serve para dar destaque a alguma frase/palavra para organizar melhor o cod
+
+
+Iframe - serve para linkar paginas externas para a nossa, exemplo clima
+    <iframe
+      src="https://www.accuweather.com/"
+      width="600" height="450"
+    > </iframe>
+EX; google maps
+<div>
+    <h3>Contato</h3>
+
+    <p>Endereço: Av. Ayrton Senna, 3000 - Barra da Tijuca, Rio de Janeiro - RJ</p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.1178584692666!2d-43.36403258535193!3d-22.982693146361264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2ec9620a2d%3A0x5c8412e8969fa343!2sDevMedia!5e0!3m2!1spt-BR!2sbr!4v1614278713361!5m2!1spt-BR!2sbr"
+      width="600" height="450"
+    ></iframe>
+
+  </div>
+  
+  ----------------------------------
+  <titel>TAGS de Cabeçalho</title>
+  
+title - Define o titulo da pag
+meta (description, charset, viewport, robots)
+<meta name="description" content="Oque será buscado pelos motores de pesquisa"> = define a descrição de uma pag - utilizada por motores de pesquisa e buscadores e outros serviços web
+<meta charset="UTF-8"> = Informa ao browser o conjunto de caracteres que nossa página utiliza, respnsável por exibir caracteres especiais como 'é''à' corretamente na tela "UTF-8" é o padrão por ser o mais completo
+<meta name="robots" content="noindex" /> = é utilizada quando queremos que uma página não apareça nos resultados de busca, utiliada para impedir que os buscadores exibam páginas internas como relatórios e sistemas administrativos
+<meta name="robots" content="nofollow"> = todo o buscados acessa o conteudo de páginas em busca de informações. como título, descrição e links, dizemos ao buscador para não nos associar aos links da página, util quando a pag possui muitos links externos ou quando os links apontam para páginas com dados pessoais, extratos, números de telefone, etc
+<meta name="robots" content="noindex, nofollow"/> impede a página de aparecer em resultado de busca e dizemos ao buscador para não nos associar aos links da página.
+<meta name=”viewport” content="width=device-width, initial-scale=1"> = a meta tag Viewport e utilizada para que o conteúdo da página seja exibido corretamente na tela de um dispositivo, independente do tamanho o content="width=device-width ajusta a largura do conteúdo já o initial-scale=1 define o zoom inicial da página 1.0 = padrão do browser(sem zoom)
+
+link
+<link rel="stylesheet" href="style.css"> = server para linkar um arquivo HTML a um arquivo CSS para realizarmos a estilização do HTML onde o hfer="" aponta para o arquivo CSS com os estilos da página
+
+style
+<style> = 
+            div{
+                background: #b8b8b8;
+            }
+        </style> Permite escrever o conteudo do CSS diremante no arquivo HTML e tem o mesmo resultado final que a tag <link>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pousada Secreta</title> --> define o titulo da pag
+        <meta name="robots" content="noindex" />
+         <meta name="viewport" content="width=device-width, initial-scale=1"> --> dimensiona corretamente na tela do dispositivo
+        <link rel="stylesheet" type="text/css" href="style.css">  --> Add arquivo css Externo
+        <script type="text/javascript" src="script.js"></script> --> Add arquivo JS externo
+	<meta name="description" content="Este é o curso de HTML onde você vai aprender tudo d básico ao avançado">    
+    </head>
+
+        <body>
+            <div>
+                
+
+            </div>
+
+
+
+        </body>
+</html>
+  
+  
+---------------------------------------------------------------------  
+  
+  
